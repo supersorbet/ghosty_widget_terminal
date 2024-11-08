@@ -43,10 +43,6 @@ const randomBootText = [
     `Validating hardware ...`,
     `Loading drivers ...`,
     `Loading system files ...`,
-    `Loading user files ...`,
-    `Loading user settings ...`,
-    `Loading user preferences ...`,
-    'Updating mainframe ...',
 ]
 
 const loadingBar = document.querySelector('.loading-bar');

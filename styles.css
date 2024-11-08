@@ -1,4 +1,4 @@
- html, body {
+html, body {
     margin: 0px;
     padding: 0px;
     font-family: 'Courier New', Courier, monospace;
@@ -146,6 +146,99 @@
         font-size: 5px;
         
     }
+}
+
+.widget-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #01050b;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.terminal-widget {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #01050b;
+    border: 1px solid #6af46a;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(106, 244, 106, 0.2);
+    width: fit-content;
+}
+
+.terminal-widget-header {
+    background-color: #030c01;
+    padding: 10px;
+    border-bottom: 1px solid #6af46a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.control-btn.red { background-color: #ff5f56; }
+.control-btn.yellow { background-color: #ffbd2e; }
+.control-btn.green { background-color: #27c93f; }
+
+.terminal-close-btn {
+    background: none;
+    border: none;
+    color: #7CFC00;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.terminal-close-btn:hover {
+    color: #FF0000;
+}
+
+.terminal-iframe {
+    border: none;
+    min-width: 360px;
+    min-height: 660px;
+    filter: hue-rotate(180deg) brightness(0.9);
+}
+
+.terminal-loading {
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    animation: pulse 1.5s infinite;
+}
+
+.iframe-container {
+    display: none;
+}
+
+.iframe-container iframe {
+    border: none;
+    width: 360px;
+    height: 660px;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
 }
 
 
